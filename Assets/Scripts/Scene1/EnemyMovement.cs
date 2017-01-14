@@ -76,7 +76,7 @@ public class EnemyMovement : MonoBehaviour {
 
 
 
-/* (IMP!) Save! - awesome, shrink all into one object method. Mesmerizing to player. Used for dozens of enemy players at once. They all come to one location to make it look like it's one enemy. Imagine doing that in the opposite direction. One enemy expanding into multiple enemies. */
+/* (IMP!) Save! - shrinks all into one position. */
 //public class EnemyMovement : MonoBehaviour
 //{
 //	public Transform farEnd;
