@@ -85,9 +85,10 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
-'Assets/Scripts/CamMouseLook.cs'
-'Assets/Scripts/CharacterController.cs'
-'Assets/Scripts/PlayerController2.cs'
+'Assets/Scripts/DetectLeaksWindow.cs'
+'Assets/Scripts/EnemyMovement2.cs'
+'Assets/Scripts/New in Scene2/CamMouseLook.cs'
+'Assets/Scripts/New in Scene2/PlayerController2.cs'
 'Assets/Scripts/Scene1/BulletFromEnemy.cs'
 'Assets/Scripts/Scene1/BulletHit.cs'
 'Assets/Scripts/Scene1/EnemyMovement.cs'

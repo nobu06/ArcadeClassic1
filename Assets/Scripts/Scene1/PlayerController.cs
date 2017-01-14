@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour {
 	public Transform bulletSpawn;
 	public GameObject bulletGiantPrefab;
 
-	void Update()
-	{
+	/*
+	 * Tae input to move the player with the arrow keys
+	 */ 
+	void Update() {
 		float translation = Input.GetAxis ("Vertical") * speed;		// forward and backward
 		float straffe = Input.GetAxis ("Horizontal") * speed;		// side movement
 
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour {
 		translation *= Time.deltaTime;
 		straffe *= Time.deltaTime;
 
-		transform.Translate (straffe, translation, 0);			// Note: had to do -straffe for spaceship. Don't know why
+		transform.Translate (-straffe, translation, 0);			// Note: had to do -straffe for spaceship. Don't know why
 
 
 //		var x = Input.GetAxis ("Horizontal") * Time.deltaTime * 150.0f;
@@ -29,19 +31,24 @@ public class PlayerController : MonoBehaviour {
 //		transform.Translate (0, 0, z);
 //
 
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
+		if (Input.GetKeyDown(KeyCode.Space)) {
 			Fire();
 		}
 
-		if (Input.GetKeyDown (KeyCode.V))
-		{
+		if (Input.GetKeyDown (KeyCode.V)) {
 			FireExtra ();
 		}
+
+
+		// line used for memory management. Still deciding where would be a good place to put it
+		Resources.UnloadUnusedAssets();		// should be placed here or elsewhere??
 	}
 
-	void Fire()
-	{
+	/*
+	 * Instantiates a bullet.
+	 * The bullet gets destroyed after 5 seconds
+	 */ 
+	void Fire() {
 		// Create the bullet from the bullet prefb
 		var bullet = (GameObject)Instantiate (
 			bulletPrefab,
@@ -57,8 +64,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-	void FireExtra()
-	{
+	void FireExtra() {
 		// Create the bullet from the bullet prefb
 		var bullet = (GameObject)Instantiate (
 			bulletGiantPrefab,
@@ -71,10 +77,4 @@ public class PlayerController : MonoBehaviour {
 		// Destroy the bullet after 2 seconds
 		Destroy(bullet, 10.0f);
 	}
-
-
-//	public override void OnStartLocalPlayer()
-//	{
-//		GetComponent<MeshRenderer> ().material.color = Color.blue;
-//	}
 }

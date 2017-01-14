@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CamMouseLook.cs" />
-     <Compile Include="Assets\Scripts\PlayerController2.cs" />
+     <Compile Include="Assets\Scripts\DetectLeaksWindow.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement2.cs" />
+     <Compile Include="Assets\Scripts\New in Scene2\CamMouseLook.cs" />
+     <Compile Include="Assets\Scripts\New in Scene2\PlayerController2.cs" />
      <Compile Include="Assets\Scripts\Scene1\BulletFromEnemy.cs" />
      <Compile Include="Assets\Scripts\Scene1\BulletHit.cs" />
      <Compile Include="Assets\Scripts\Scene1\EnemyMovement.cs" />

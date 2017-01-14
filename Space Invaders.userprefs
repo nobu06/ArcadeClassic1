@@ -1,6 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Scene1/EnemyMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Scene1/EnemyMovement.cs" Line="58" Column="14" />
+      <File FileName="Assets/Scripts/Scene1/PlayerController.cs" Line="67" Column="19" />
+      <File FileName="Assets/Scripts/Scene1/BulletHit.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/EnemyMovement2.cs" Line="32" Column="2" />
+      <File FileName="Assets/Scripts/DetectLeaksWindow.cs" Line="31" Column="5" />
+      <File FileName="Assets/Scripts/Scene1/BulletFromEnemy.cs" Line="11" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

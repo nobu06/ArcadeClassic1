@@ -8,19 +8,22 @@ public class BulletHit : MonoBehaviour {
 
 	private int count;
 
-	void Start()
-	{
+	void Start() {
 		count = 0;
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
+	void OnTriggerEnter(Collider other) {
+
+		// set object with the tag "enemy" to inactive when the bullet hits it - includes Enemy obj and Enemy bullets
 		if (other.gameObject.CompareTag ("Enemy"))
 		{
-			other.gameObject.SetActive (false);
+			other.gameObject.SetActive (false);		// make the enemy disappear
 			count++;
-			this.gameObject.SetActive (false);
+			this.gameObject.SetActive (false);		// make the bullet disappear
 			//			setCountText ();
+
+//			Destroy(other.gameObject);			// destroy the object to prevent memory leak. Working?
+//			Destroy(this.gameObject);
 		}
 	}
 }

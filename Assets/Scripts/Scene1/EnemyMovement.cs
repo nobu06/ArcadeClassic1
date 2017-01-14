@@ -23,21 +23,27 @@ public class EnemyMovement : MonoBehaviour {
 
 
 	void Start() {
-		// set the two positions that the obj will move between.
+		// set the two positions that the obj will move between
 		frometh = transform.position;
 		untoeth = transform.position + sideOffset;
 
-		// to make enemy to shoot at random times
+		// set random value that determines when it will shoot
 		nextFire = nextFire + Random.Range (fireRatep, fireRatem);		// or nextFire = Time.time + Random.Range (fireRatep, fireRatem);
 	}
 
 
+	/*
+	 * Enemy movement that goes sideways between two positions, back and forth
+	 */
 	void Update() {
 		transform.position = Vector3.Lerp(frometh, untoeth,
 			Mathf.SmoothStep(0f, 1f, Mathf.PingPong(Time.time/secondsForOneLength, 1f) ) );
 	}
 
 
+	/*
+	 * Decides whether to shoot a bullet or not, based on random number calculation
+	 */
 	void FixedUpdate () {
 		if (Time.time > nextFire) {
 			nextFire = Time.time + Random.Range (fireRatep, fireRatem);
@@ -46,10 +52,10 @@ public class EnemyMovement : MonoBehaviour {
 	}
 
 	/*
-	 * Fires the bullet
+	 * Instantiates a bullet.
+	 * The bullet gets destroyed after a few seconds.
 	 */
-	void Fire()
-	{
+	void Fire() {
 		// Create the bullet from the bullet prefb
 		var bullet = (GameObject)Instantiate (
 			bulletPrefab,
@@ -61,6 +67,8 @@ public class EnemyMovement : MonoBehaviour {
 
 		// Destroy the bullet after 3 seconds
 		Destroy(bullet, 3.0f);
+
+
 	}
 		
 }	

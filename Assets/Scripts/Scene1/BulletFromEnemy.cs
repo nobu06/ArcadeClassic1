@@ -5,12 +5,12 @@ public class BulletFromEnemy : MonoBehaviour {
 	// Q) how can I keep track of the entire score??
 	// seems like this count will only last during the lifetime of the bullet
 
-	private int count;
+//	private int count;
 
-	void Start()
-	{
-		count = 0;
-	}
+//	void Start()
+//	{
+//		count = 0;
+//	}
 
 	void OnTriggerEnter(Collider other)
 	{
